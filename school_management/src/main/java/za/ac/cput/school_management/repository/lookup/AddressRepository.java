@@ -10,5 +10,8 @@ package za.ac.cput.school_management.repository.lookup;
 import za.ac.cput.school_management.domain.lookup.Address;
 import za.ac.cput.school_management.repository.IRepository;
 
+import java.util.List;
+
 public interface AddressRepository extends IRepository <Address, String> {
+    List<Address> findAll();
 }

@@ -47,5 +47,7 @@ public class AddressRepositoryIMPL {
         if(address != null) this.AddressList.remove(address);
     }
 
-
+    public List<Address> findAll(){
+        return this.AddressList;
+    }
 }
