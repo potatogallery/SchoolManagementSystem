@@ -1,5 +1,15 @@
 package za.ac.cput.school_management.domain.student;
 
+/*
+    Student.java
+    Entity for the Student
+    Zavian Minnies(217230458)
+    14 June 2022
+ */
+
+
+import za.ac.cput.school_management.domain.lookup.Address;
+
 public class StudentAddress {
 
     private String studentId;
