@@ -7,6 +7,10 @@ package za.ac.cput.school_management.domain.employee;
     10 June 2022
  */
 
+import za.ac.cput.school_management.domain.lookup.Address;
+
+import java.util.Objects;
+
 public class EmployeeAddress {
 
     private String staffId;
