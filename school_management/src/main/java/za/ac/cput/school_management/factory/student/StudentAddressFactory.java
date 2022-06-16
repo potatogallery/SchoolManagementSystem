@@ -1,14 +1,13 @@
 package za.ac.cput.school_management.factory.student;
 
-<<<<<<< Updated upstream
-public class StudentAddressFactory {
-=======
+
 
 import za.ac.cput.school_management.domain.lookup.Address;
 import za.ac.cput.school_management.domain.student.StudentAddress;
 
 
 public class StudentAddressFactory {
+
 
     public static StudentAddress createStudentAddress(String studentId, Address address) {
 
@@ -18,5 +17,5 @@ public class StudentAddressFactory {
                 .build();
         return studentAddress;
     }
->>>>>>> Stashed changes
+
 }
