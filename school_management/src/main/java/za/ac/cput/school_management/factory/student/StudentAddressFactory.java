@@ -1,10 +1,13 @@
 package za.ac.cput.school_management.factory.student;
 
 
+
+import za.ac.cput.school_management.domain.lookup.Address;
 import za.ac.cput.school_management.domain.student.StudentAddress;
 
 
-public class public class StudentAddressFactory {
+public class StudentAddressFactory {
+
 
     public static StudentAddress createStudentAddress(String studentId, Address address) {
 
@@ -14,4 +17,5 @@ public class public class StudentAddressFactory {
                 .build();
         return studentAddress;
     }
+
 }
