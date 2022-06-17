@@ -1,4 +1,5 @@
 package za.ac.cput.school_management.repository.city.impl;
+
 /*
 Mogammad-Redar Behardien _ 216234107
 ADP3 JUNE ASSIGNMENT
@@ -54,8 +55,8 @@ public class CountryRepositoryIMPLTest {
 
     @Test
     void read() {
-        Country create = this.repository.create(this.country);
-        Optional<Country> read = Optional.ofNullable(this.repository.read(this.country.getCountryId()));
+        // Country create = this.repository.create(this.country);
+        Optional<Country> read = Optional.ofNullable(this.repository.read(this.country.getId()));
         assertAll(
                 () -> assertTrue(read.isPresent()),
                 () -> assertSame(this.country, read.get()));

@@ -24,13 +24,13 @@ public class CountryRepositoryIMPL {
     }
 
     public Country read(String a) {
-        return this.CountryList.stream().filter(g -> g.getCountryId().equalsIgnoreCase(a)).findAny().orElse(null);
+        return this.CountryList.stream().filter(g -> g.getId().equalsIgnoreCase(a)).findAny().orElse(null);
     }
 
     public Country update(Country country) {
-        Country a = read(country.getCountryId());
+        Country a = read(country.getId());
         if (a != null) {
-            delete(a.getCountryId());
+            delete(a.getId());
             return create(country);
         }
         return null;
