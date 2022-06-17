@@ -11,6 +11,9 @@ import za.ac.cput.school_management.domain.student.Student;
 import za.ac.cput.school_management.repository.student.StudentRepository;
 import za.ac.cput.school_management.service.student.StudentService;
 
+import java.util.List;
+import java.util.Optional;
+
 
 public class StudentServiceIMPL implements StudentService {
 
@@ -30,22 +33,38 @@ public class StudentServiceIMPL implements StudentService {
 
     @Override
     public Student create(Student student) {
-        return null;
+        return this.studentRepository.save(student);
     }
 
     @Override
     public Student read(String s) {
-        return null;
+        Optional<Student> optionalStudent = this.studentRepository.findById(s);
+        return optionalStudent.orElse(null);
     }
 
     @Override
     public Student update(Student student) {
-        return null;
+        return this.studentRepository.save(student);
     }
 
     @Override
     public void delete(String s) {
+        this.studentRepository.deleteById(s);
+    }
 
+    @Override
+    public Student retrieveById(String studentId) {
+        List<Student> students = getAll();
+        for(Student student : students) {
+            if (student.getStudentId().equalsIgnoreCase(studentId))
+                return student;
+        }
+        return null;
+    }
+
+    @Override
+    public List<Student> getAll() {
+        return this.studentRepository.findAll();
     }
 
 }
