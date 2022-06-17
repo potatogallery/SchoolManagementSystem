@@ -1,4 +1,7 @@
 package za.ac.cput.school_management.domain.city;
+
+import java.util.Objects;
+
 /*
 Mogammad-Redar Behardien _ 216234107
 ADP3 JUNE ASSIGNMENT
@@ -6,7 +9,7 @@ City.java
 */
 public class City {
 
-    private String cityId;
+    private String id;
     private String name;
     private Country country;
 
@@ -16,17 +19,17 @@ public class City {
 
     private City(Builder builder) {
 
-        this.cityId = builder.cityId;
+        this.id = builder.id;
         this.name = builder.name;
         this.country = builder.country;
     }
 
-    public String getCityId() {
-        return cityId;
+    public String getId() {
+        return id;
     }
 
-    public void setCityId(String cityId) {
-        this.cityId = cityId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -48,7 +51,7 @@ public class City {
     @Override
     public String toString() {
         return "City{" +
-                "cityId='" + cityId + '\'' +
+                "id='" + id + '\'' +
                 ", name=" + name + '\'' +
                 ", country=" + country +
                 '}';
@@ -56,12 +59,12 @@ public class City {
 
     public static class Builder {
 
-        private String cityId;
+        private String id;
         private String name;
         private Country country;
 
-        public Builder setCityId(String cityId) {
-            this.cityId = cityId;
+        public Builder setId(String id) {
+            this.id = id;
             return this;
         }
 
@@ -76,7 +79,7 @@ public class City {
         }
 
         public Builder copy(City city) {
-            this.cityId = city.cityId;
+            this.id = city.id;
             this.name = city.name;
             this.country = city.country;
             return this;
@@ -84,6 +87,30 @@ public class City {
 
         public City build() {
             return new City(this);
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o)
+                return true;
+            if (o == null || getClass() != o.getClass())
+                return false;
+            Builder builder = (Builder) o;
+            return id == builder.id && name == builder.name && country.equals(builder.country);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(id, name, country);
+        }
+
+        @Override
+        public String toString() {
+            return "Builder{" +
+                    "id='" + id + '\'' +
+                    ", name=" + name + '\'' +
+                    ", country=" + country +
+                    '}';
         }
     }
 }
