@@ -25,13 +25,13 @@ public class CityRepositoryIMPL {
     }
 
     public City read(String a) {
-        return this.CityList.stream().filter(g -> g.getCityId().equalsIgnoreCase(a)).findAny().orElse(null);
+        return this.CityList.stream().filter(g -> g.getId().equalsIgnoreCase(a)).findAny().orElse(null);
     }
 
     public City update(City city) {
-        City a = read(city.getCityId());
+        City a = read(city.getId());
         if (a != null) {
-            delete(a.getCityId());
+            delete(a.getId());
             return create(city);
         }
         return null;

@@ -1,15 +1,16 @@
 package za.ac.cput.school_management.repository.city.impl;
+
 /*
 Mogammad-Redar Behardien _ 216234107
 ADP3 JUNE ASSIGNMENT
 CityRepositoryIMPLTest.java
 */
-import org.checkerframework.checker.units.qual.A;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+//import org.checkerframework.checker.units.qual.A;
+//import org.junit.jupiter.api.AfterEach;
+//import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.school_management.domain.city.City;
-import za.ac.cput.school_management.factory.city.CityFactory;
+//import za.ac.cput.school_management.factory.city.CityFactory;
 import za.ac.cput.school_management.repository.city.CityRepository;
 
 import java.util.List;
@@ -54,8 +55,8 @@ public class CityRepositoryIMPLTest {
 
     @Test
     void read() {
-        City create = this.repository.create(this.city);
-        Optional<City> read = Optional.ofNullable(this.repository.read(this.city.getCityId()));
+        // City create = this.repository.create(this.city);
+        Optional<City> read = Optional.ofNullable(this.repository.read(this.city.getId()));
         assertAll(
                 () -> assertTrue(read.isPresent()),
                 () -> assertSame(this.city, read.get()));
