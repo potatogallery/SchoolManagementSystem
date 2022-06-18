@@ -7,6 +7,7 @@ package za.ac.cput.school_management.domain.employee;
     10 June 2022
  */
 
+import org.apache.tomcat.jni.Address;
 import za.ac.cput.school_management.domain.lookup.Address;
 
 public class EmployeeAddress {

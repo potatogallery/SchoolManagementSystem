@@ -10,6 +10,8 @@ import za.ac.cput.school_management.domain.lookup.Name;
 import za.ac.cput.school_management.domain.student.Student;
 import za.ac.cput.school_management.helper.StringHelper;
 
+import javax.lang.model.element.Name;
+
 public class StudentFactory {
 
     public static Student createStudent(String studentId, String email, Name name) {
