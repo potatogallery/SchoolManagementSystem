@@ -8,6 +8,8 @@ Student.java
 
 import za.ac.cput.school_management.domain.lookup.Name;
 
+import javax.lang.model.element.Name;
+
 public class Student {
     public String studentId;
     public String email;
