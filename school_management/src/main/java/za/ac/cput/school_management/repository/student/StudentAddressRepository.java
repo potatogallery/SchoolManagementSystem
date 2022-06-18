@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 /*
     StudentAddress.java
+    Group Assignment
     Entity for the StudentAddress
     Zavian Minnies (217230458)
     17 June 2022
