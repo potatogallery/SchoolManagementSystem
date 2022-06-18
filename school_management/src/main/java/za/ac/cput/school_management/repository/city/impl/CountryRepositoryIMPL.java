@@ -1,10 +1,12 @@
 package za.ac.cput.school_management.repository.city.impl;
 
+import za.ac.cput.school_management.repository.city.CountryRepository;
+
 import za.ac.cput.school_management.domain.city.Country;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CountryRepositoryIMPL {
+public class CountryRepositoryIMPL implements CountryRepository {
     private final List<Country> CountryList;
     private static CountryRepositoryIMPL Country_REPOSITORY;
 
@@ -44,5 +46,17 @@ public class CountryRepositoryIMPL {
 
     public List<Country> findAll() {
         return this.CountryList;
+    }
+
+    @Override
+    public List<Country> findByCountryId(String id) {
+        List<Country> countryIdMatchList = new ArrayList<>();
+        List<Country> countryList = findAll();
+        for (Country country : countryList) {
+            if (country.getId().equals(id))
+                countryIdMatchList.add(country);
+        }
+        return countryIdMatchList;
+
     }
 }
