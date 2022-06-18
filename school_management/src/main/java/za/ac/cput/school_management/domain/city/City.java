@@ -9,13 +9,9 @@ City.java
 */
 public class City {
 
-    private String id;
-    private String name;
-    private Country country;
-
-    public City() {
-
-    }
+    private final String id;
+    private final String name;
+    private final Country country;
 
     private City(Builder builder) {
 
@@ -28,32 +24,20 @@ public class City {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Country getCountry() {
         return country;
     }
 
-    public void setCountry(Country country) {
-        this.country = country;
-    }
-
     @Override
     public String toString() {
         return "City{" +
                 "id='" + id + '\'' +
-                ", name=" + name + '\'' +
-                ", country=" + country +
+                ", name='" + name + '\'' +
+                ", country='" + country + '\'' +
                 '}';
     }
 
@@ -102,15 +86,6 @@ public class City {
         @Override
         public int hashCode() {
             return Objects.hash(id, name, country);
-        }
-
-        @Override
-        public String toString() {
-            return "Builder{" +
-                    "id='" + id + '\'' +
-                    ", name=" + name + '\'' +
-                    ", country=" + country +
-                    '}';
         }
     }
 }

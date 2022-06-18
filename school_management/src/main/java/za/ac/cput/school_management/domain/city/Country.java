@@ -30,7 +30,7 @@ public class Country {
     public String toString() {
         return "Country{" +
                 "id='" + id + '\'' +
-                ", name=" + name +
+                ", name='" + name + '\'' +
                 '}';
     }
 
@@ -88,14 +88,6 @@ public class Country {
         @Override
         public int hashCode() {
             return Objects.hash(id, name);
-        }
-
-        @Override
-        public String toString() {
-            return "Builder{" +
-                    "id='" + id + '\'' +
-                    ", name=" + name +
-                    '}';
         }
     }
 }
