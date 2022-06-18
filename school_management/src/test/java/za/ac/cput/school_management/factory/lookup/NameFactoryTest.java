@@ -3,6 +3,8 @@ package za.ac.cput.school_management.factory.lookup;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.school_management.domain.lookup.Name;
 
+import javax.lang.model.element.Name;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /*

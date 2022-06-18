@@ -9,6 +9,7 @@ package za.ac.cput.school_management.domain.employee;
 
 import za.ac.cput.school_management.domain.lookup.Name;
 
+import javax.lang.model.element.Name;
 import java.util.Objects;
 
 public class Employee {
